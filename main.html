@@ -10,6 +10,28 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
+			let arr=[]
+let max=-Infinity
+let secMax=-Infinity
+
+//Find out max in the element 
+if (arr.length<2) {
+    return -Infinity;
+}
+
+for (let index = 0; index < arr.length; index++) {
+  max=Math.max(arr[index],max) // max=1
+}
+
+//find out secondMax
+
+for (let index = 0; index < arr.length; index++) {
+   if ( secMax<arr[index] && max>arr[index]  ) {
+    secMax=arr[index]
+   }
+    
+}
+return secMax;
 			
 		}
 
